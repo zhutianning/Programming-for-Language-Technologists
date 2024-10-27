@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{article}
+
+% Page Margins
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+
+\usepackage{graphicx}
+% Title and Author
+\title{Title of Your Report}
+\author{Anonymous (do NOT include your name)}
+\date{\today} % You can change this to a specific date
+
+
+% Bibliography Setup
+\usepackage{natbib} % For author-year style citations
+\setcitestyle{authoryear,round}
+
+\bibliographystyle{agsm} % Change to the style you prefer
+\usepackage{url} % For including URLs in citations
+
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+This should be a summary of your report
+
+\section{FSA}
+
+
+\section{Introduction}
+% Your introduction goes here. This part can be slightly less formally written than the rest, and must include your research question.
+
+This should be a (somewhat) informal motivation for your work leading to a research question. The motivation need not be well-grounded, and can in fact be semi-fabricated because the goal for Task 3 is not to cunduct research, but to learn a method and to practice reporting results. 
+        
+        For example, you could say something like:
+        
+        ``It has been shown that there is a correlation between weight and height. However, it is unclear to what extent this holds for every possible dataset, and whether the relation is in fact linear on the original scale. Thus, the research question is:
+        
+        Is there a relation between weight and height on the logaritmic scale?'')
+\section{Related work}
+
+
+Find at least one study that reports results on the same research question, or something close.
+
+Remember that in scientific writing, you need to back up statements with references. It might look like something like this fabricated part:
+
+Or, as \cite[p. 380]{shannon1948mathematical} claimed:
+
+``Doubling the time roughly squares
+the number of possible messages, or doubles the logarithm, etc''
+
+\cite{doe2020} investigated that a correlation between height and weight. Their study collected data from men and women ($n=145$) between 18 and 68 years of age. The results showed a strong correlation between height and weight on the logarithmic scale. Other studies have reported mixed results  \citep{lizadaughter2000, nick2023}
+
+Thus, remember to include at least one (real) reference (and no fabricated ones).
+
+            \begin{itemize}
+    \item Let's have a look at an elegant
+        way to handle lists: List comprehension
+        \item List comprehension is fun
+        \item This is another item
+        \end{itemize}
+
+        \begin{enumerate}
+            \item Here is a list
+            \item This is the second number
+            \item And this is the third
+        \end{enumerate}
+
+\section{Data and Method}
+% Describe the data and methods you used for your investigation. Breifly describe the code (in very general language).
+
+This section describes the data (remember to include a link to the dataset in a footnote), as well as what you have done, which is basically that you have taken this dataset and conducted a linear regression analysis.
+
+\begin{center}
+\begin{tabular}{ | c | c | c | }
+ 8 & 9 & 150 \\
+ \hline
+ cell4 & cell5 & cell6 \\  
+ \hline
+ cell7 & cell8 & cell9  \\
+\end{tabular}
+\end{center}
+
+\section{Results}
+This section should just be a description of what you found. Include no interpretation more than explaining what the $R^2$ value, $p$-value, intercept and coefficients represent.
+
+Here is how to include a plot:
+
+``As can be seen in Figure \ref{fig:heightWeight}, there is a positive correlation between height and weight
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics{log_reg_plot.png}
+    \caption{The relation between height (x-axis) and weight (y-axis) on the logarithmic scale.}
+    \label{fig:heightWeight}
+\end{figure}
+
+
+\section{Discussion}
+Give a short discussion on how the results should be interpreted, for example what the implications are.
+
+Suggest future studies.
+
+\section{Conclusion}
+Summarize your findings and conclusions in a few sentences.
+
+\newpage
+
+% References Section
+\bibliography{references}
+%It is fairly easy to include references in LaTeX but you need to have a .bib-file (called references.bib in this case).
+
+%You can copy the format from the example references in the .bib-file but change the relevant information (e.g., author, year, etc) and also copy bib-style references from Google scholar.
+
+\end{document}
+
